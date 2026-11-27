@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}ServiceCare{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            ServiceCare
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/services">Services</a>
+
+            {% if session.get('user_id') %}
+                <a href="/my_requests">My Requests</a>
+                <a href="/request">New Request</a>
+                <a href="/logout">Logout</a>
+
+            {% elif session.get('admin') %}
+                <a href="/admin_dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+
+            {% else %}
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+                <a href="/admin_login">Admin</a>
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 ServiceCare. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

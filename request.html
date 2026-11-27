@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Request</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f4f8;
+            padding: 30px;
+        }
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #183b75;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #183b75;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Service Request Form</h2>
+
+    <form action="/submit_request" method="POST">
+
+        <input type="text" name="name"
+        placeholder="Enter Your Name" required>
+
+        <input type="email" name="email"
+        placeholder="Enter Your Email" required>
+
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="Repair">Repair Service</option>
+            <option value="Maintenance">Maintenance</option>
+        </select>
+
+        <textarea name="description"
+        placeholder="Describe Your Problem" required></textarea>
+
+        <button type="submit">Submit Request</button>
+
+    </form>
+</div>
+
+</body>
+</html>

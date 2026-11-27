@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login - ServiceCare</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f4f8;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0002;
+        }
+
+        h2 {
+            text-align: center;
+            color: #183b75;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #183b75;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Admin Login</h2>
+
+    <form action="/admin_login" method="POST">
+
+        <input type="email"
+               name="email"
+               placeholder="Admin Email"
+               required>
+
+        <input type="password"
+               name="password"
+               placeholder="Admin Password"
+               required>
+
+        <button type="submit">Login as Admin</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

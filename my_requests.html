@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}My Requests | ServiceCare{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <h2>My Service Requests</h2>
+
+    <p>View and track all your submitted service requests.</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Total Requests</h3>
+            <h2>{{ requests_list|length }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Need Assistance?</h3>
+            <p>Submit a new service request anytime.</p>
+            <a href="/request" class="btn">New Request</a>
+        </div>
+
+    </div>
+
+    <div class="table-container" style="margin-top: 35px;">
+
+        <h3 style="margin-bottom: 20px;">Request History</h3>
+
+        {% if requests_list %}
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in requests_list %}
+                <tr>
+                    <td>#{{ item['id'] }}</td>
+                    <td>{{ item['category'] }}</td>
+                    <td>{{ item['description'] }}</td>
+                    <td>
+                        <strong>{{ item['status'] }}</strong>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% else %}
+
+        <p>No service requests found.</p>
+
+        <a href="/request" class="btn">Submit Your First Request</a>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

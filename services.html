@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services | ServiceCare{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Our Services</h1>
+
+        <p>
+            Explore our service management solutions.
+            Submit your request and track it easily.
+        </p>
+
+        <a href="/request" class="btn">Request a Service</a>
+
+    </div>
+</section>
+
+
+<section class="section">
+
+    <h2>What We Offer</h2>
+
+    <p>Choose the service support you need.</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🔧 Repair Services</h3>
+            <p>
+                Submit repair requests for equipment and
+                technical problems.
+            </p>
+            <a href="/request" class="btn">Request Now</a>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Maintenance Services</h3>
+            <p>
+                Request maintenance support to keep
+                equipment working properly.
+            </p>
+            <a href="/request" class="btn">Request Now</a>
+        </div>
+
+        <div class="card">
+            <h3>💻 Technical Support</h3>
+            <p>
+                Get assistance for technical issues
+                and service-related problems.
+            </p>
+            <a href="/request" class="btn">Request Now</a>
+        </div>
+
+        <div class="card">
+            <h3>📋 Request Tracking</h3>
+            <p>
+                Check your submitted service requests
+                and their current status.
+            </p>
+            <a href="/my_requests" class="btn">Track Request</a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

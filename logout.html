@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Logged Out | ServiceCare{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="card" style="max-width: 550px; margin: 70px auto; padding: 50px 30px;">
+
+        <div style="font-size: 65px; margin-bottom: 20px;">
+            ✅
+        </div>
+
+        <h2>Successfully Logged Out!</h2>
+
+        <p style="margin: 20px 0; line-height: 1.7;">
+            Thank you for using ServiceCare.
+            Your session has been safely closed.
+        </p>
+
+        <p style="color: #64748b; margin-bottom: 30px;">
+            We hope to serve you again!
+        </p>
+
+        <a href="/" class="btn">Go to Home</a>
+
+        <a href="/login" class="btn">Login Again</a>
+
+    </div>
+
+</section>
+
+{% endblock %}

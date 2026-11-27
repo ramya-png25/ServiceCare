@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Login Successful | ServiceCare{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="card" style="max-width: 550px; margin: 70px auto; padding: 50px 30px;">
+
+        <div style="font-size: 65px; margin-bottom: 20px;">
+            🎉
+        </div>
+
+        <h2>Login Successful!</h2>
+
+        <h3 style="color: #2563eb; margin-top: 15px;">
+            Welcome, {{ session.get('user_name', 'User') }}!
+        </h3>
+
+        <p style="margin: 20px 0; line-height: 1.7;">
+            You have successfully logged in to ServiceCare.
+            Now you can manage and track your service requests easily.
+        </p>
+
+        <a href="/" class="btn">Go to Home</a>
+
+        <a href="/my_requests" class="btn">My Dashboard</a>
+
+    </div>
+
+</section>
+
+{% endblock %}
